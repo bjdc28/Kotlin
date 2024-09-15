@@ -1,5 +1,6 @@
 var randomNumber = 0
 var userInput = 0
+var inputIncorrect = false
 
 
 fun main(){
@@ -11,10 +12,18 @@ fun main(){
 
     randomNumber = (1..3).random()
 
+
     if (userInput <= -1 || userInput == 0 || userInput > 3 ){
         println("INVALID NUMBER")
         println("Please choose again.")
         userInput = readln().toInt()
+    }
+
+    while (inputIncorrect){
+        println("INVALID NUMBER")
+        println("Please choose again.")
+        userInput = readln().toInt()
+
     }
 
     println("Hello World")
